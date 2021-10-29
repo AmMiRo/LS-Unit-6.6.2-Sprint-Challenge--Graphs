@@ -29,13 +29,9 @@ player = Player(world.starting_room)
 # Fill this out with directions to walk
 traversal_path = []
 
-stack = []
-
 visited = {}
 
 back_track = []
-
-directions = ["n", "e", "s", "w"]
 
 opposite_direction = {"n":"s", "s":"n", "e":"w", "w":"e"}
 
@@ -57,6 +53,9 @@ while len(visited) < len(room_graph):
         traversal_path.append(direction)
         back_track.append(opposite_direction[direction])
         player.travel(direction)
+
+
+# directions = ["n", "e", "s", "w"]
 
 # def next_clockwise(d, arr):
 #     if d is None:
